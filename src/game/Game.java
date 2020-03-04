@@ -14,7 +14,9 @@ public class Game {
     private Map<Player, List<CoinState>> history;
 
     public Game() {
-        history = new HashMap<>();
+        this.history = new HashMap<>();
+        this.rules = Rules.getRules();
+        this.coin = Coin.getCoin();
     }
 
     /**
@@ -24,6 +26,10 @@ public class Game {
      */
     public void addPlayer(Player player) {
       // TODO: Votre code ici
+        if(!this.history.containsKey(player)){
+            this.history.put(player, new ArrayList<CoinState>());
+        }
+
     }
 
     /**
@@ -31,6 +37,12 @@ public class Game {
      */
     public void play() {
       // TODO: Votre code ici
+        for (Player player: this.history.keySet()) {
+            while(!this.rules.checkWin(this.history.get(player))){
+                player.play(this.coin);
+                this.history.get(player).add(this.coin.getState());
+            }
+        }
     }
 
     /**
@@ -40,7 +52,42 @@ public class Game {
      */
     public Statistics getStatistics() {
       // TODO: Votre code ici
-      return null;
+      return new Statistics(getAverageToWin(),getFewerMovesToWin(),getMostMovesToWin(),getTotalNumberMoves());
+    }
+
+    private int getAverageToWin(){
+        return getTotalNumberMoves()/this.history.keySet().size();
+    }
+
+    private int getFewerMovesToWin(){
+        int moves = 0;
+        for (Player player: this.history.keySet()) {
+            if(moves == 0){
+                moves = this.history.get(player).size();
+            }
+            if(this.history.get(player).size() < moves){
+                moves = this.history.get(player).size();
+            }
+        }
+        return moves;
+    }
+
+    private int getMostMovesToWin(){
+        int moves = 0;
+        for (Player player: this.history.keySet()) {
+            if(this.history.get(player).size() > moves){
+                moves = this.history.get(player).size();
+            }
+        }
+        return moves;
+    }
+
+    private int getTotalNumberMoves(){
+        int total= 0;
+        for (Player player: this.history.keySet()) {
+            total += this.history.get(player).size();
+        }
+        return total;
     }
 
     /**
@@ -50,7 +97,7 @@ public class Game {
      */
     public Map<Player, List<CoinState>> getHistory() {
       // TODO: Votre code ici
-      return null;
+      return this.history;
     }
 
 
@@ -62,7 +109,7 @@ public class Game {
      */
     public List<CoinState> getSpecificHistory(Player player) {
       // TODO: Votre code ici
-      return null;
+      return this.history.get(player);
     }
 
 }
