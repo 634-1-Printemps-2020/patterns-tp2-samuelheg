@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c32d158-fa13-4c1e-8219-09e621954e3b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+    <list default="true" id="3c32d158-fa13-4c1e-8219-09e621954e3b" name="Default" comment="première version du tp">
       <change beforePath="$PROJECT_DIR$/src/game/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Rules.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/materials/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/materials/Coin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/materials/CoinState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/materials/CoinState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Statistics.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +110,14 @@
       <workItem from="1582451168644" duration="2608000" />
       <workItem from="1582453825522" duration="378000" />
     </task>
+    <task id="LOCAL-00001" summary="première version du tp">
+      <created>1583339228079</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583339228079</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +133,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="première version du tp" />
+    <option name="LAST_COMMIT_MESSAGE" value="première version du tp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1582451659529">

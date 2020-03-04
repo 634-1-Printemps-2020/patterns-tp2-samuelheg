@@ -25,16 +25,16 @@ public class Rules {
    */
   public boolean checkWin(List<CoinState> states) {
     // TODO: Votre code ici
-    int cpt = 0;
+    int cpt = 1;
     for (int i = 1; i < states.size() ; i++) {
-      if (cpt == 3){
-        return true;
-      }
       if(states.get(i).equals(states.get(i-1))){
         cpt ++;
       }else{
-        System.out.println(states.get(i) + " - " + states.get(i-1));
-        cpt = 0;
+        //System.out.println(states.get(i) + " - " + states.get(i-1));
+        cpt = 1;
+      }
+      if (cpt == 3){
+        return true;
       }
     }
     return false;
